@@ -169,7 +169,7 @@ export const data = new SlashCommandBuilder()
   .addSubcommand(subcommand =>
     subcommand
       .setName('request')
-      .setDescription('Request 0.01 SUI testnet tokens')
+      .setDescription('Request SUI testnet tokens')
       .addStringOption(option =>
         option
           .setName('wallet_address')
