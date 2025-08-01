@@ -1,0 +1,29 @@
+{
+  "name": "sui-faucet-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for Sui Faucet with role-based access control",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "deploy": "npm run build && npm start",
+    "deploy-commands": "ts-node src/deploy-commands.ts"
+  },
+  "keywords": ["discord", "bot", "sui", "faucet", "blockchain"],
+  "author": "Sui Faucet Team",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "typescript": "^5.2.2",
+    "ts-node": "^10.9.1",
+    "nodemon": "^3.0.1"
+  }
+} 
