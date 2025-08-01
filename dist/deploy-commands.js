@@ -34,8 +34,8 @@ const rest = new discord_js_1.REST().setToken(process.env.DISCORD_TOKEN);
 (async () => {
     try {
         logger_1.default.info(`Started refreshing ${commands.length} application (/) commands.`);
-        // The put method is used to fully refresh all commands in the guild with the current set
-        const data = await rest.put(discord_js_1.Routes.applicationGuildCommands(process.env.DISCORD_CLIENT_ID, process.env.DISCORD_GUILD_ID), { body: commands });
+        // The put method is used to fully refresh all commands globally
+        const data = await rest.put(discord_js_1.Routes.applicationCommands(process.env.DISCORD_CLIENT_ID), { body: commands });
         logger_1.default.info(`Successfully reloaded ${data.length} application (/) commands.`);
     }
     catch (error) {

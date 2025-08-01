@@ -547,3 +547,62 @@
 {"level":"info","message":"API Response: 200 /admin/config","service":"discord-bot","timestamp":"2025-08-01T08:43:42.816Z"}
 {"level":"info","message":"API Request: POST /faucet","service":"discord-bot","timestamp":"2025-08-01T08:44:28.174Z"}
 {"level":"info","message":"API Response: 200 /faucet","service":"discord-bot","timestamp":"2025-08-01T08:44:35.542Z"}
+{"level":"info","message":"Loaded command: admin","service":"discord-bot","timestamp":"2025-08-01T08:56:31.158Z"}
+{"level":"info","message":"Loaded command: debug","service":"discord-bot","timestamp":"2025-08-01T08:56:31.241Z"}
+{"level":"info","message":"Loaded command: faucet","service":"discord-bot","timestamp":"2025-08-01T08:56:31.312Z"}
+{"level":"info","message":"Loaded command: help","service":"discord-bot","timestamp":"2025-08-01T08:56:31.366Z"}
+{"level":"info","message":"Bot is ready! Logged in as suicet#3409","service":"discord-bot","timestamp":"2025-08-01T08:56:33.974Z"}
+{"level":"info","message":"Loaded command: admin","service":"discord-bot","timestamp":"2025-08-01T09:19:14.698Z"}
+{"level":"info","message":"Loaded command: debug","service":"discord-bot","timestamp":"2025-08-01T09:19:14.796Z"}
+{"level":"info","message":"Loaded command: faucet","service":"discord-bot","timestamp":"2025-08-01T09:19:14.878Z"}
+{"level":"info","message":"Loaded command: help","service":"discord-bot","timestamp":"2025-08-01T09:19:14.931Z"}
+{"level":"info","message":"Bot is ready! Logged in as suicet#3409","service":"discord-bot","timestamp":"2025-08-01T09:19:17.194Z"}
+{"level":"info","message":"API Request: GET /admin/config","service":"discord-bot","timestamp":"2025-08-01T09:25:37.437Z"}
+{"level":"info","message":"API Response: 200 /admin/config","service":"discord-bot","timestamp":"2025-08-01T09:25:37.450Z"}
+{"level":"info","message":"API Request: GET /admin/analytics","service":"discord-bot","timestamp":"2025-08-01T09:29:28.448Z"}
+{"level":"info","message":"API Response: 200 /admin/analytics","service":"discord-bot","timestamp":"2025-08-01T09:29:30.385Z"}
+{"level":"info","message":"API Request: GET /admin/analytics","service":"discord-bot","timestamp":"2025-08-01T09:31:21.462Z"}
+{"level":"info","message":"API Response: 200 /admin/analytics","service":"discord-bot","timestamp":"2025-08-01T09:31:22.128Z"}
+{"level":"error","message":"Error checking user permissions: Cannot read properties of undefined (reading 'has')","service":"discord-bot","stack":"TypeError: Cannot read properties of undefined (reading 'has')\n    at Function.getUserPermissionLevel (/home/shiva/Desktop/projects/sui/discord-bot/src/services/permissions.ts:20:47)\n    at Function.getRoleInfo (/home/shiva/Desktop/projects/sui/discord-bot/src/services/permissions.ts:100:34)\n    at Object.execute (/home/shiva/Desktop/projects/sui/discord-bot/src/commands/debug/permissions.ts:33:42)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Client.<anonymous> (/home/shiva/Desktop/projects/sui/discord-bot/src/index.ts:87:5)","timestamp":"2025-08-01T09:32:18.965Z"}
+{"level":"info","message":"API Request: POST /admin/config/update","service":"discord-bot","timestamp":"2025-08-01T09:32:32.891Z"}
+{"level":"error","message":"API Response Error:","service":"discord-bot","timestamp":"2025-08-01T09:32:33.539Z"}
+{"level":"info","message":"Loaded command: admin","service":"discord-bot","timestamp":"2025-08-01T17:17:16.925Z"}
+{"level":"info","message":"Loaded command: debug","service":"discord-bot","timestamp":"2025-08-01T17:17:17.005Z"}
+{"level":"info","message":"Loaded command: faucet","service":"discord-bot","timestamp":"2025-08-01T17:17:17.089Z"}
+{"level":"info","message":"Loaded command: help","service":"discord-bot","timestamp":"2025-08-01T17:17:17.138Z"}
+{"level":"info","message":"Bot is ready! Logged in as suicet#3409","service":"discord-bot","timestamp":"2025-08-01T17:17:20.017Z"}
+{"level":"info","message":"Loaded command: admin","service":"discord-bot","timestamp":"2025-08-01T17:19:40.072Z"}
+{"level":"info","message":"Loaded command: debug","service":"discord-bot","timestamp":"2025-08-01T17:19:40.156Z"}
+{"level":"info","message":"Loaded command: faucet","service":"discord-bot","timestamp":"2025-08-01T17:19:40.277Z"}
+{"level":"info","message":"Loaded command: help","service":"discord-bot","timestamp":"2025-08-01T17:19:40.321Z"}
+{"level":"info","message":"Bot is ready! Logged in as suicet#3409","service":"discord-bot","timestamp":"2025-08-01T17:19:42.454Z"}
+{"level":"info","message":"Processing faucet request for user 854532013330399304 with wallet 0x8f08e708c6da8b20d4235f89da95712ed408851aeecb11750e9023d7d304a503","service":"discord-bot","timestamp":"2025-08-01T17:20:28.436Z"}
+{"level":"info","message":"Requesting tokens for wallet: 0x8f08e708c6da8b20d4235f89da95712ed408851aeecb11750e9023d7d304a503, user: 854532013330399304","service":"discord-bot","timestamp":"2025-08-01T17:20:28.438Z"}
+{"code":"ERR_INVALID_URL","input":"/faucet","level":"error","message":"Unexpected error in faucet service: Invalid URL","service":"discord-bot","stack":"TypeError: Invalid URL\n    at new URL (node:internal/url:818:25)\n    at dispatchHttpRequest (/home/shiva/Desktop/projects/sui/discord-bot/node_modules/axios/lib/adapters/http.js:232:20)\n    at /home/shiva/Desktop/projects/sui/discord-bot/node_modules/axios/lib/adapters/http.js:152:5\n    at new Promise (<anonymous>)\n    at wrapAsync (/home/shiva/Desktop/projects/sui/discord-bot/node_modules/axios/lib/adapters/http.js:132:10)\n    at http (/home/shiva/Desktop/projects/sui/discord-bot/node_modules/axios/lib/adapters/http.js:170:10)\n    at Axios.dispatchRequest (/home/shiva/Desktop/projects/sui/discord-bot/node_modules/axios/lib/core/dispatchRequest.js:51:10)\n    at Axios._request (/home/shiva/Desktop/projects/sui/discord-bot/node_modules/axios/lib/core/Axios.js:187:33)\n    at Axios.request (/home/shiva/Desktop/projects/sui/discord-bot/node_modules/axios/lib/core/Axios.js:40:25)\n    at Axios.httpMethod [as post] (/home/shiva/Desktop/projects/sui/discord-bot/node_modules/axios/lib/core/Axios.js:226:19)\n    at Axios.request (/home/shiva/Desktop/projects/sui/discord-bot/node_modules/axios/lib/core/Axios.js:45:41)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Object.requestTokens (/home/shiva/Desktop/projects/sui/discord-bot/src/commands/faucet/request.ts:99:24)\n    at async Object.execute (/home/shiva/Desktop/projects/sui/discord-bot/src/commands/faucet/request.ts:209:24)\n    at async Client.<anonymous> (/home/shiva/Desktop/projects/sui/discord-bot/src/index.ts:87:5)","timestamp":"2025-08-01T17:20:28.459Z"}
+{"error":"An unexpected error occurred. Please try again later.","level":"info","message":"Faucet service response:","service":"discord-bot","status":"error","timestamp":"2025-08-01T17:20:28.459Z"}
+{"level":"info","message":"Loaded command: admin","service":"discord-bot","timestamp":"2025-08-01T17:21:57.391Z"}
+{"level":"info","message":"Loaded command: debug","service":"discord-bot","timestamp":"2025-08-01T17:21:57.486Z"}
+{"level":"info","message":"Loaded command: faucet","service":"discord-bot","timestamp":"2025-08-01T17:21:57.586Z"}
+{"level":"info","message":"Loaded command: help","service":"discord-bot","timestamp":"2025-08-01T17:21:57.630Z"}
+{"level":"info","message":"Bot is ready! Logged in as suicet#3409","service":"discord-bot","timestamp":"2025-08-01T17:22:00.421Z"}
+{"level":"info","message":"Processing faucet request for user 854532013330399304 with wallet 0x8f08e708c6da8b20d4235f89da95712ed408851aeecb11750e9023d7d304a503","service":"discord-bot","timestamp":"2025-08-01T17:23:37.452Z"}
+{"level":"info","message":"Requesting tokens for wallet: 0x8f08e708c6da8b20d4235f89da95712ed408851aeecb11750e9023d7d304a503, user: 854532013330399304","service":"discord-bot","timestamp":"2025-08-01T17:23:37.454Z"}
+{"level":"error","message":"Axios error:","service":"discord-bot","timestamp":"2025-08-01T17:23:37.485Z"}
+{"error":"Server is under maintenance. Please try again later.","level":"info","message":"Faucet service response:","service":"discord-bot","status":"error","timestamp":"2025-08-01T17:23:37.486Z"}
+{"level":"info","message":"Loaded command: admin","service":"discord-bot","timestamp":"2025-08-01T17:24:55.484Z"}
+{"level":"info","message":"Loaded command: debug","service":"discord-bot","timestamp":"2025-08-01T17:24:55.557Z"}
+{"level":"info","message":"Loaded command: faucet","service":"discord-bot","timestamp":"2025-08-01T17:24:55.665Z"}
+{"level":"info","message":"Loaded command: help","service":"discord-bot","timestamp":"2025-08-01T17:24:55.719Z"}
+{"level":"info","message":"Bot is ready! Logged in as suicet#3409","service":"discord-bot","timestamp":"2025-08-01T17:24:58.328Z"}
+{"level":"info","message":"Processing faucet request for user 854532013330399304 with wallet 0x8f08e708c6da8b20d4235f89da95712ed408851aeecb11750e9023d7d304a503","service":"discord-bot","timestamp":"2025-08-01T17:25:23.206Z"}
+{"level":"info","message":"Requesting tokens for wallet: 0x8f08e708c6da8b20d4235f89da95712ed408851aeecb11750e9023d7d304a503, user: 854532013330399304","service":"discord-bot","timestamp":"2025-08-01T17:25:23.207Z"}
+{"error":"Too many requests from this IP. Please try again later.","key":"106.200.27.65","level":"error","message":"Axios error:","retryAfter":83183,"retryAt":"2025-08-02T16:31:46.104Z","service":"discord-bot","timestamp":"2025-08-01T17:25:23.607Z","type":"ip"}
+{"error":"Too many requests from this IP. Please try again later.","level":"info","message":"Faucet service response:","nextClaimTimestamp":1754152306104,"service":"discord-bot","status":"error","timestamp":"2025-08-01T17:25:23.607Z"}
+{"level":"info","message":"API Request: POST /admin/config/update","service":"discord-bot","timestamp":"2025-08-01T17:27:23.116Z"}
+{"level":"info","message":"API Response: 200 /admin/config/update","service":"discord-bot","timestamp":"2025-08-01T17:27:24.754Z"}
+{"level":"info","message":"Processing faucet request for user 854532013330399304 with wallet 0x8f08e708c6da8b20d4235f89da95712ed408851aeecb11750e9023d7d304a503","service":"discord-bot","timestamp":"2025-08-01T17:27:51.091Z"}
+{"level":"info","message":"Requesting tokens for wallet: 0x8f08e708c6da8b20d4235f89da95712ed408851aeecb11750e9023d7d304a503, user: 854532013330399304","service":"discord-bot","timestamp":"2025-08-01T17:27:51.092Z"}
+{"error":"Too many requests from this IP. Please try again later.","key":"106.200.27.65","level":"error","message":"Axios error:","retryAfter":83035,"retryAt":"2025-08-02T16:31:46.104Z","service":"discord-bot","timestamp":"2025-08-01T17:27:51.659Z","type":"ip"}
+{"error":"Too many requests from this IP. Please try again later.","level":"info","message":"Faucet service response:","nextClaimTimestamp":1754152306104,"service":"discord-bot","status":"error","timestamp":"2025-08-01T17:27:51.659Z"}
+{"level":"info","message":"API Request: POST /admin/config/update","service":"discord-bot","timestamp":"2025-08-01T17:29:12.680Z"}
+{"level":"info","message":"API Response: 200 /admin/config/update","service":"discord-bot","timestamp":"2025-08-01T17:29:13.812Z"}

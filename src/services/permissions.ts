@@ -6,9 +6,9 @@ export class PermissionService {
   // Get role IDs dynamically from environment
   private static getRoleIds() {
     return {
-      MODERATOR: process.env.MODERATOR_ROLE_ID,
-      ADMIN: process.env.ADMIN_ROLE_ID,
-    };
+    MODERATOR: process.env.MODERATOR_ROLE_ID,
+    ADMIN: process.env.ADMIN_ROLE_ID,
+  };
   }
 
   // Get user's permission level based on their roles

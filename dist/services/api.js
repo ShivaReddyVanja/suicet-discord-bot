@@ -46,10 +46,19 @@ class ApiService {
             throw error;
         }
     }
-    // Get faucet analytics
+    // Get faucet analytics (no authentication required for role-based access)
     async getAnalytics() {
         try {
-            const response = await this.client.get('/admin/analytics');
+            const botSecret = process.env.DISCORD_BOT_SECRET;
+            if (!botSecret) {
+                throw new Error('DISCORD_BOT_SECRET not found in environment variables');
+            }
+            const response = await this.client.get('/admin/analytics', {
+                headers: {
+                    'User-Agent': 'Discord-Bot/1.0',
+                    'X-Discord-Bot-Secret': botSecret,
+                },
+            });
             return response.data;
         }
         catch (error) {
@@ -57,14 +66,43 @@ class ApiService {
             throw error;
         }
     }
-    // Get faucet configuration
+    // Get faucet configuration (no authentication required for role-based access)
     async getConfig() {
         try {
-            const response = await this.client.get('/admin/config');
+            const botSecret = process.env.DISCORD_BOT_SECRET;
+            if (!botSecret) {
+                throw new Error('DISCORD_BOT_SECRET not found in environment variables');
+            }
+            const response = await this.client.get('/admin/config', {
+                headers: {
+                    'User-Agent': 'Discord-Bot/1.0',
+                    'X-Discord-Bot-Secret': botSecret,
+                },
+            });
             return response.data;
         }
         catch (error) {
             logger_1.default.error('Failed to get config:', error);
+            throw error;
+        }
+    }
+    // Update faucet configuration (no authentication required for role-based access)
+    async updateConfig(configData) {
+        try {
+            const botSecret = process.env.DISCORD_BOT_SECRET;
+            if (!botSecret) {
+                throw new Error('DISCORD_BOT_SECRET not found in environment variables');
+            }
+            const response = await this.client.post('/admin/config/update', configData, {
+                headers: {
+                    'User-Agent': 'Discord-Bot/1.0',
+                    'X-Discord-Bot-Secret': botSecret,
+                },
+            });
+            return response.data;
+        }
+        catch (error) {
+            logger_1.default.error('Failed to update config:', error);
             throw error;
         }
     }

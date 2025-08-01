@@ -17,6 +17,7 @@ const client = new discord_js_1.Client({
         discord_js_1.GatewayIntentBits.Guilds,
         discord_js_1.GatewayIntentBits.GuildMessages,
         discord_js_1.GatewayIntentBits.GuildMembers,
+        discord_js_1.GatewayIntentBits.MessageContent,
     ],
 });
 // Command collection
@@ -57,8 +58,8 @@ client.on(discord_js_1.Events.InteractionCreate, async (interaction) => {
         return;
     }
     try {
-        // Check permissions
-        if (interaction.member && 'roles' in interaction.member) {
+        // Check permissions - only for admin commands
+        if (command.permissionLevel > 0 && interaction.member && 'roles' in interaction.member) {
             const member = interaction.member;
             const hasPermission = permissions_1.PermissionService.hasPermission(member, command.permissionLevel);
             if (!hasPermission) {

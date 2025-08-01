@@ -66,11 +66,11 @@ class EmbedService {
             .setDescription('Here are the available commands:')
             .addFields({
             name: '🎁 Request Tokens',
-            value: '`/faucet request <wallet_address>` - Request 0.01 SUI testnet tokens',
+            value: '`/faucet request <wallet_address>` - Request 0.01 SUI testnet tokens\nExample: `/faucet request 0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef`',
             inline: false
         }, {
             name: '📊 Check Status',
-            value: '`/faucet status <wallet_address>` - Check your request status',
+            value: '`/faucet status <wallet_address>` - Check your request status (coming soon)',
             inline: false
         }, {
             name: '❓ Get Help',
@@ -79,7 +79,7 @@ class EmbedService {
         })
             .addFields({
             name: '🔧 Admin Commands',
-            value: 'Available to moderators and admins only',
+            value: 'Available to moderators and admins only (role-based access)',
             inline: false
         }, {
             name: '📈 Analytics',
@@ -88,6 +88,10 @@ class EmbedService {
         }, {
             name: '⚙️ Configuration',
             value: '`/admin config` - View faucet settings',
+            inline: false
+        }, {
+            name: '🔧 Update Configuration',
+            value: '`/admin update-config` - Update faucet settings',
             inline: false
         })
             .setTimestamp()

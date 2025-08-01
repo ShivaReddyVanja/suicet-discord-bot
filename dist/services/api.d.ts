@@ -6,6 +6,17 @@ declare class ApiService {
     requestTokens(walletAddress: string, discordUserId: string): Promise<FaucetResponse>;
     getAnalytics(): Promise<AnalyticsResponse>;
     getConfig(): Promise<ConfigResponse>;
+    updateConfig(configData: {
+        cooldownSeconds?: number;
+        faucetAmount?: number;
+        maxRequestsPerIp?: number;
+        maxRequestsPerWallet?: number;
+        enabled?: boolean;
+    }): Promise<{
+        success: boolean;
+        config?: any;
+        error?: string;
+    }>;
     healthCheck(): Promise<boolean>;
 }
 declare const _default: ApiService;

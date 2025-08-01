@@ -7,15 +7,33 @@ exports.PermissionService = void 0;
 const types_1 = require("../types");
 const logger_1 = __importDefault(require("../utils/logger"));
 class PermissionService {
+    // Get role IDs dynamically from environment
+    static getRoleIds() {
+        return {
+            MODERATOR: process.env.MODERATOR_ROLE_ID,
+            ADMIN: process.env.ADMIN_ROLE_ID,
+        };
+    }
     // Get user's permission level based on their roles
     static getUserPermissionLevel(member) {
         try {
+            const roleIds = this.getRoleIds();
             // Check if user has admin role
-            if (this.ROLE_IDS.ADMIN && member.roles.cache.has(this.ROLE_IDS.ADMIN)) {
+            if (roleIds.ADMIN && member.roles.cache.has(roleIds.ADMIN)) {
                 return types_1.PermissionLevel.ADMIN;
             }
             // Check if user has moderator role
-            if (this.ROLE_IDS.MODERATOR && member.roles.cache.has(this.ROLE_IDS.MODERATOR)) {
+            if (roleIds.MODERATOR && member.roles.cache.has(roleIds.MODERATOR)) {
+                return types_1.PermissionLevel.MODERATOR;
+            }
+            // Check for direct user ID assignments (alternative method)
+            const userId = member.id;
+            const adminUserIds = process.env.ADMIN_USER_IDS?.split(',') || [];
+            const moderatorUserIds = process.env.MODERATOR_USER_IDS?.split(',') || [];
+            if (adminUserIds.includes(userId)) {
+                return types_1.PermissionLevel.ADMIN;
+            }
+            if (moderatorUserIds.includes(userId)) {
                 return types_1.PermissionLevel.MODERATOR;
             }
             // Default to user level
@@ -50,8 +68,9 @@ class PermissionService {
     }
     // Validate role IDs from environment
     static validateRoleIds() {
-        const hasModeratorRole = !!this.ROLE_IDS.MODERATOR;
-        const hasAdminRole = !!this.ROLE_IDS.ADMIN;
+        const roleIds = this.getRoleIds();
+        const hasModeratorRole = !!roleIds.MODERATOR;
+        const hasAdminRole = !!roleIds.ADMIN;
         if (!hasModeratorRole) {
             logger_1.default.warn('MODERATOR_ROLE_ID not set in environment variables');
         }
@@ -73,9 +92,4 @@ class PermissionService {
     }
 }
 exports.PermissionService = PermissionService;
-// Role IDs (will be set from environment variables)
-PermissionService.ROLE_IDS = {
-    MODERATOR: process.env.MODERATOR_ROLE_ID,
-    ADMIN: process.env.ADMIN_ROLE_ID,
-};
 //# sourceMappingURL=permissions.js.map
