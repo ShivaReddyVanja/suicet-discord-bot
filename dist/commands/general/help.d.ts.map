@@ -1,1 +1,0 @@
-{"version":3,"file":"help.d.ts","sourceRoot":"","sources":["../../../src/commands/general/help.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,mBAAmB,EAAE,2BAA2B,EAAE,MAAM,YAAY,CAAC;AAC9E,OAAO,EAAE,OAAO,EAAmB,MAAM,aAAa,CAAC;AAIvD,eAAO,MAAM,IAAI,qBAEkD,CAAC;AAEpE,eAAO,MAAM,OAAO,GAAU,aAAa,2BAA2B,KAAG,OAAO,CAAC,IAAI,CAuBpF,CAAC;AAEF,eAAO,MAAM,OAAO,EAAE,OAIrB,CAAC"}

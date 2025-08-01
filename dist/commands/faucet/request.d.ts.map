@@ -1,1 +1,0 @@
-{"version":3,"file":"request.d.ts","sourceRoot":"","sources":["../../../src/commands/faucet/request.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,mBAAmB,EAAE,2BAA2B,EAAyC,MAAM,YAAY,CAAC;AACrH,OAAO,EAAE,OAAO,EAAmB,MAAM,aAAa,CAAC;AAoKvD,eAAO,MAAM,IAAI,EAaV,mBAAmB,CAAC;AAE3B,eAAO,MAAM,OAAO,GAAU,aAAa,2BAA2B,KAAG,OAAO,CAAC,IAAI,CA6EpF,CAAC;AAEF,eAAO,MAAM,OAAO,EAAE,OAIrB,CAAC"}

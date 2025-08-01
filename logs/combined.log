@@ -612,3 +612,8 @@
 {"level":"info","message":"Prepared command: help","service":"discord-bot","timestamp":"2025-08-01T17:32:01.396Z"}
 {"level":"info","message":"Started refreshing 4 application (/) commands.","service":"discord-bot","timestamp":"2025-08-01T17:32:01.397Z"}
 {"level":"info","message":"Successfully reloaded 4 application (/) commands.","service":"discord-bot","timestamp":"2025-08-01T17:32:02.996Z"}
+{"level":"info","message":"Loaded command: admin","service":"discord-bot","timestamp":"2025-08-01T18:08:03.185Z"}
+{"level":"info","message":"Loaded command: debug","service":"discord-bot","timestamp":"2025-08-01T18:08:03.253Z"}
+{"level":"info","message":"Loaded command: faucet","service":"discord-bot","timestamp":"2025-08-01T18:08:03.353Z"}
+{"level":"info","message":"Loaded command: help","service":"discord-bot","timestamp":"2025-08-01T18:08:03.394Z"}
+{"level":"info","message":"Bot is ready! Logged in as suicet#3409","service":"discord-bot","timestamp":"2025-08-01T18:08:05.922Z"}
